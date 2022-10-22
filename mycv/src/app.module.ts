@@ -31,12 +31,6 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
         };
       },
     }),
-    // TypeOrmModule.forRoot({
-    //   type: 'sqlite',
-    //   database: 'db.sqlite',
-    //   entities: [User, Report],
-    //   synchronize: true,
-    // }),
   ],
   controllers: [AppController],
   providers: [AppService],
