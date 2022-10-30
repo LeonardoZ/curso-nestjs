@@ -1,7 +1,6 @@
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const cookieSession = require('cookie-session');
 import { AppModule } from './app.module';
 
 async function bootstrap() {
@@ -11,7 +10,6 @@ async function bootstrap() {
       whitelist: true,
     }),
   );
-  app.use(cookieSession({ keys: ['asdasdasd'] }));
   await app.listen(3000);
 }
 bootstrap();
