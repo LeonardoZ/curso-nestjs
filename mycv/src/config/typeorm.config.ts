@@ -9,7 +9,7 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
   createTypeOrmOptions(): TypeOrmModuleOptions {
     return {
       type: 'sqlite',
-      synchronize: false,
+      synchronize: process.env.NODE_ENV === 'test',
       database: this.configService.get<string>('DB_NAME'),
       autoLoadEntities: true,
     };
